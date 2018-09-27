@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Table</title>
+
+    </head>
+
+    <body>
+        <script>
+            function multiplicationTable(n) {
+                let table = '';
+                table += ('<table border="1">');
+                let firstRow = '<tr><th>x</th>';
+                for (let a = 0; a < n; a++) {
+                    firstRow += `<th>${a + 1}</th>`;
+                }
+                firstRow += '</tr>';
+                table +=(firstRow);
+                for (let i = 1; i <= n; i++) {
+                    let row = `<tr><th>${i}</th>`;
+                    for (let j = 1; j <= n; j++) {
+                        row += `<th>${j * i}</th>`;
+                    }
+                    row += '</tr>';
+                    table +=(row);
+                }
+                table +=('</table>');
+
+                return table;
+            }
+
+            document.body.innerHTML = multiplicationTable(5);
+        </script>
+    </body>
+
+</html>
