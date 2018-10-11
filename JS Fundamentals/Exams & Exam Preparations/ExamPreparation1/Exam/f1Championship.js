@@ -5,9 +5,6 @@ function calculateAndDislayTeams(arr) {
         let teamName = str[0];
         let pilotName = str[1];
         let score = +str[2];
-        // if (teams.get(teamName).size === 2) {
-        //     continue;
-        // }
         if (!teams.has(teamName)) {
             teams.set(teamName, new Map());
         }
