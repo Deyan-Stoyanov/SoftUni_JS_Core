@@ -1,10 +1,7 @@
 function calculateAndDislayTeams(arr) {
     let teams = new Map();
     for (let str of arr) {
-        str = str.split(' -> ').filter(x => x !== '');
-        let teamName = str[0];
-        let pilotName = str[1];
-        let score = +str[2];
+        let[teamName, pilotName, score] = str.split(' -> ').filter(x => x !== '');
         if (!teams.has(teamName)) {
             teams.set(teamName, new Map());
         }
