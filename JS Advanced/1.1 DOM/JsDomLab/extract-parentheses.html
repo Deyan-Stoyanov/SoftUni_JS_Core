@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Extract Parentheses</title>
+    </head>
+
+    <body>
+        <p id="content">
+            Rakiya (Bulgarian brandy) is home-made liquor (alcoholic drink). It can be made of grapes, plums or other fruits (even apples).
+        </p>
+        <p id="holder">
+            Lorem ipsum dolor sit amet, (consectetur adipiscing elit), sed do eiusmod (tempor) incididunt ut labore (et dolore magna) aliqua.
+        </p>
+        <p id="result"></p>
+        <script>
+            window.onload = function () {
+                document.getElementById('result').textContent = extraxt('content');
+            }
+            function extraxt(id) {
+                let text = document.getElementById(id).textContent;
+                let matches = text.match(/\(.*?\)/gm);
+                return matches.map(x => x.substring(1, x.length - 1)).join('; ');
+            }
+
+        </script>
+    </body>
+
+</html>
