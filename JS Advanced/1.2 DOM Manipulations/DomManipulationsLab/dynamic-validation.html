@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Focus</title>
+        <style>
+            .error {
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+
+    <body onload="validate()">
+        <label for="email">Enter email:</label>
+        <input id="email" type="text" />
+        <script>
+            function validate() {
+                let input = document.getElementById('email');
+                input.addEventListener('change', function (event) {
+                    if (/^[a-z\.\-]+\@[a-z]+\.[a-z]+$/g.test(input.value) === true) {
+                        event.target.removeAttribute('class');
+                    } else {
+                        event.target.className = 'error';
+                    }
+                });
+            }
+
+        </script>
+    </body>
+
+</html>
