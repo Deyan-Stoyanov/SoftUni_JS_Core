@@ -62,13 +62,13 @@ let manager = (function () {
     };
 }());
 
-manager("prepare cheverme 1");
-manager("restock protein 10");
-manager("prepare cheverme 1");
-manager("restock carbohydrate 10");
-manager("prepare cheverme 1");
-manager("restock fat 10");
-manager("prepare cheverme 1");
-manager("restock flavour 10");
-manager("prepare cheverme 1");
-manager("report");
+console.log(manager("prepare cheverme 1"));
+console.log(manager("restock protein 10"));
+console.log(manager("prepare cheverme 1"));
+console.log(manager("restock carbohydrate 10"));
+console.log(manager("prepare cheverme 1"));
+console.log(manager("restock fat 10"));
+console.log(manager("prepare cheverme 1"));
+console.log(manager("restock flavour 10"));
+console.log(manager("prepare cheverme 1"));
+console.log(manager("report"));
